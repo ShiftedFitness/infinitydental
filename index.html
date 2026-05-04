@@ -2419,7 +2419,8 @@ const translations = {
       if (currentLabel) {
         const flagMap = { en:"\uD83C\uDDEC\uD83C\uDDE7", es:"\uD83C\uDDEA\uD83C\uDDF8", sv:"\uD83C\uDDF8\uD83C\uDDEA", fa:"<img src=\"./assets/flag-iran-imperial.svg\" alt=\"Imperial Iran flag\" class=\"inline-flag\">" };
         const nameMap = { en:"English", es:"Espa\u00f1ol", sv:"Svenska", fa:"\u0641\u0627\u0631\u0633\u06CC" };
-        currentLabel.textContent = flagMap[code] + " " + nameMap[code];
+        // innerHTML (not textContent) — the Farsi flag is an <img>, not an emoji glyph
+        currentLabel.innerHTML = flagMap[code] + " " + nameMap[code];
       }
 
       try { localStorage.setItem(STORAGE_KEY, code); } catch (_) {}
