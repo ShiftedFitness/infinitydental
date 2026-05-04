@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local previews / scratch
+.netlify/
+node_modules/
+
+# Local env (in case anyone adds one later)
+.env
+.env.local
